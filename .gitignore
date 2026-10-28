@@ -1,0 +1,23 @@
+# secrets
+.env
+
+# python
+__pycache__/
+*.pyc
+.venv/
+*.egg-info/
+.pytest_cache/
+build/
+dist/
+
+# local tool state (spend ledger, LLM cache)
+.unconflict/
+
+# downloaded / mined datasets (large; re-creatable via eval scripts)
+data/
+
+# per-hunk raw outputs can be large; summaries + configs are kept
+results/*/raw/
+
+*.resolved
+.DS_Store
