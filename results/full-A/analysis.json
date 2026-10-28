@@ -1,0 +1,46 @@
+{
+  "llm_gate_vs_llm_only": {
+    "exact": {
+      "n": 7882,
+      "clusters": 7882,
+      "diff_pts": 0.01,
+      "ci95_pts": [
+        -0.03,
+        0.05
+      ],
+      "b_right_a_wrong": 2,
+      "a_right_b_wrong": 1
+    },
+    "semantic": {
+      "n": 7882,
+      "clusters": 7882,
+      "diff_pts": 0.0,
+      "ci95_pts": [
+        -0.05,
+        0.05
+      ],
+      "b_right_a_wrong": 2,
+      "a_right_b_wrong": 2
+    }
+  },
+  "gate_rejections_total": 29,
+  "outcomes": {
+    "git_default": {
+      "conflict": 7708,
+      "semantic": 99,
+      "exact": 75
+    },
+    "llm_only": {
+      "different": 3560,
+      "exact": 3354,
+      "semantic": 645,
+      "conflict": 323
+    },
+    "llm_gate": {
+      "different": 3552,
+      "exact": 3355,
+      "semantic": 644,
+      "conflict": 331
+    }
+  }
+}

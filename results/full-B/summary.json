@@ -1,0 +1,810 @@
+{
+  "overall": {
+    "git_default": {
+      "n": 1131,
+      "exact": 0,
+      "semantic": 0,
+      "ws": 0,
+      "abstained": 1131,
+      "attempted": 0,
+      "attempted_exact": 0,
+      "attempted_semantic": 0,
+      "unlocatable": 4,
+      "stages": {
+        "abstain": 1131
+      },
+      "gate_rejections": 0,
+      "spent_usd": 0.0,
+      "nominal_cost_usd": 0.0,
+      "nominal_cost_per_conflict_usd": 0.0
+    },
+    "mergiraf_only": {
+      "n": 1131,
+      "exact": 269,
+      "semantic": 289,
+      "ws": 291,
+      "abstained": 649,
+      "attempted": 482,
+      "attempted_exact": 269,
+      "attempted_semantic": 289,
+      "unlocatable": 74,
+      "stages": {
+        "mergiraf": 482,
+        "abstain": 649
+      },
+      "gate_rejections": 0,
+      "spent_usd": 0.0,
+      "nominal_cost_usd": 0.0,
+      "nominal_cost_per_conflict_usd": 0.0
+    },
+    "llm_only": {
+      "n": 1131,
+      "exact": 459,
+      "semantic": 497,
+      "ws": 478,
+      "abstained": 51,
+      "attempted": 1080,
+      "attempted_exact": 459,
+      "attempted_semantic": 497,
+      "unlocatable": 6,
+      "stages": {
+        "llm": 1078,
+        "abstain": 49,
+        "unknown": 4
+      },
+      "gate_rejections": 0,
+      "spent_usd": 0.1520814,
+      "nominal_cost_usd": 0.2000734,
+      "nominal_cost_per_conflict_usd": 0.00017689955791335102
+    },
+    "hybrid": {
+      "n": 1131,
+      "exact": 494,
+      "semantic": 535,
+      "ws": 526,
+      "abstained": 108,
+      "attempted": 1023,
+      "attempted_exact": 494,
+      "attempted_semantic": 535,
+      "unlocatable": 46,
+      "stages": {
+        "mergiraf": 459,
+        "llm": 489,
+        "unknown": 76,
+        "abstain": 92,
+        "llm_retry": 15
+      },
+      "gate_rejections": 199,
+      "spent_usd": 0.04522115,
+      "nominal_cost_usd": 0.15012327,
+      "nominal_cost_per_conflict_usd": 0.00013273498673740052
+    }
+  },
+  "by_language": {
+    "python": {
+      "git_default": {
+        "n": 210,
+        "exact": 0,
+        "semantic": 0,
+        "ws": 0,
+        "abstained": 210,
+        "attempted": 0,
+        "attempted_exact": 0,
+        "attempted_semantic": 0,
+        "unlocatable": 0,
+        "stages": {
+          "abstain": 210
+        },
+        "gate_rejections": 0,
+        "spent_usd": 0.0,
+        "nominal_cost_usd": 0.0,
+        "nominal_cost_per_conflict_usd": 0.0
+      },
+      "mergiraf_only": {
+        "n": 210,
+        "exact": 53,
+        "semantic": 56,
+        "ws": 55,
+        "abstained": 139,
+        "attempted": 71,
+        "attempted_exact": 53,
+        "attempted_semantic": 56,
+        "unlocatable": 13,
+        "stages": {
+          "mergiraf": 71,
+          "abstain": 139
+        },
+        "gate_rejections": 0,
+        "spent_usd": 0.0,
+        "nominal_cost_usd": 0.0,
+        "nominal_cost_per_conflict_usd": 0.0
+      },
+      "llm_only": {
+        "n": 210,
+        "exact": 119,
+        "semantic": 126,
+        "ws": 124,
+        "abstained": 4,
+        "attempted": 206,
+        "attempted_exact": 119,
+        "attempted_semantic": 126,
+        "unlocatable": 0,
+        "stages": {
+          "llm": 206,
+          "abstain": 4
+        },
+        "gate_rejections": 0,
+        "spent_usd": 0.0243927,
+        "nominal_cost_usd": 0.0286701,
+        "nominal_cost_per_conflict_usd": 0.0001365242857142857
+      },
+      "hybrid": {
+        "n": 210,
+        "exact": 138,
+        "semantic": 144,
+        "ws": 141,
+        "abstained": 3,
+        "attempted": 207,
+        "attempted_exact": 138,
+        "attempted_semantic": 144,
+        "unlocatable": 5,
+        "stages": {
+          "mergiraf": 71,
+          "llm": 121,
+          "unknown": 14,
+          "abstain": 3,
+          "llm_retry": 1
+        },
+        "gate_rejections": 3,
+        "spent_usd": 0.00597447,
+        "nominal_cost_usd": 0.018573970000000002,
+        "nominal_cost_per_conflict_usd": 8.84474761904762e-05
+      }
+    },
+    "javascript": {
+      "git_default": {
+        "n": 215,
+        "exact": 0,
+        "semantic": 0,
+        "ws": 0,
+        "abstained": 215,
+        "attempted": 0,
+        "attempted_exact": 0,
+        "attempted_semantic": 0,
+        "unlocatable": 1,
+        "stages": {
+          "abstain": 215
+        },
+        "gate_rejections": 0,
+        "spent_usd": 0.0,
+        "nominal_cost_usd": 0.0,
+        "nominal_cost_per_conflict_usd": 0.0
+      },
+      "mergiraf_only": {
+        "n": 215,
+        "exact": 57,
+        "semantic": 62,
+        "ws": 59,
+        "abstained": 125,
+        "attempted": 90,
+        "attempted_exact": 57,
+        "attempted_semantic": 62,
+        "unlocatable": 11,
+        "stages": {
+          "mergiraf": 90,
+          "abstain": 125
+        },
+        "gate_rejections": 0,
+        "spent_usd": 0.0,
+        "nominal_cost_usd": 0.0,
+        "nominal_cost_per_conflict_usd": 0.0
+      },
+      "llm_only": {
+        "n": 215,
+        "exact": 75,
+        "semantic": 82,
+        "ws": 77,
+        "abstained": 24,
+        "attempted": 191,
+        "attempted_exact": 75,
+        "attempted_semantic": 82,
+        "unlocatable": 3,
+        "stages": {
+          "llm": 192,
+          "abstain": 22,
+          "unknown": 1
+        },
+        "gate_rejections": 0,
+        "spent_usd": 0.0252247,
+        "nominal_cost_usd": 0.0315712,
+        "nominal_cost_per_conflict_usd": 0.0001468427906976744
+      },
+      "hybrid": {
+        "n": 215,
+        "exact": 93,
+        "semantic": 101,
+        "ws": 97,
+        "abstained": 26,
+        "attempted": 189,
+        "attempted_exact": 93,
+        "attempted_semantic": 101,
+        "unlocatable": 8,
+        "stages": {
+          "mergiraf": 87,
+          "llm": 90,
+          "abstain": 25,
+          "unknown": 11,
+          "llm_retry": 2
+        },
+        "gate_rejections": 29,
+        "spent_usd": 0.00903841,
+        "nominal_cost_usd": 0.022198370000000002,
+        "nominal_cost_per_conflict_usd": 0.00010324823255813955
+      }
+    },
+    "typescript": {
+      "git_default": {
+        "n": 176,
+        "exact": 0,
+        "semantic": 0,
+        "ws": 0,
+        "abstained": 176,
+        "attempted": 0,
+        "attempted_exact": 0,
+        "attempted_semantic": 0,
+        "unlocatable": 0,
+        "stages": {
+          "abstain": 176
+        },
+        "gate_rejections": 0,
+        "spent_usd": 0.0,
+        "nominal_cost_usd": 0.0,
+        "nominal_cost_per_conflict_usd": 0.0
+      },
+      "mergiraf_only": {
+        "n": 176,
+        "exact": 46,
+        "semantic": 51,
+        "ws": 51,
+        "abstained": 92,
+        "attempted": 84,
+        "attempted_exact": 46,
+        "attempted_semantic": 51,
+        "unlocatable": 13,
+        "stages": {
+          "mergiraf": 84,
+          "abstain": 92
+        },
+        "gate_rejections": 0,
+        "spent_usd": 0.0,
+        "nominal_cost_usd": 0.0,
+        "nominal_cost_per_conflict_usd": 0.0
+      },
+      "llm_only": {
+        "n": 176,
+        "exact": 66,
+        "semantic": 71,
+        "ws": 71,
+        "abstained": 5,
+        "attempted": 171,
+        "attempted_exact": 66,
+        "attempted_semantic": 71,
+        "unlocatable": 1,
+        "stages": {
+          "llm": 171,
+          "abstain": 5
+        },
+        "gate_rejections": 0,
+        "spent_usd": 0.0244807,
+        "nominal_cost_usd": 0.0363615,
+        "nominal_cost_per_conflict_usd": 0.00020659943181818182
+      },
+      "hybrid": {
+        "n": 176,
+        "exact": 63,
+        "semantic": 70,
+        "ws": 70,
+        "abstained": 28,
+        "attempted": 148,
+        "attempted_exact": 63,
+        "attempted_semantic": 70,
+        "unlocatable": 8,
+        "stages": {
+          "mergiraf": 72,
+          "llm": 60,
+          "unknown": 12,
+          "llm_retry": 8,
+          "abstain": 24
+        },
+        "gate_rejections": 69,
+        "spent_usd": 0.00860317,
+        "nominal_cost_usd": 0.03145924,
+        "nominal_cost_per_conflict_usd": 0.0001787456818181818
+      }
+    },
+    "java": {
+      "git_default": {
+        "n": 150,
+        "exact": 0,
+        "semantic": 0,
+        "ws": 0,
+        "abstained": 150,
+        "attempted": 0,
+        "attempted_exact": 0,
+        "attempted_semantic": 0,
+        "unlocatable": 1,
+        "stages": {
+          "abstain": 150
+        },
+        "gate_rejections": 0,
+        "spent_usd": 0.0,
+        "nominal_cost_usd": 0.0,
+        "nominal_cost_per_conflict_usd": 0.0
+      },
+      "mergiraf_only": {
+        "n": 150,
+        "exact": 42,
+        "semantic": 45,
+        "ws": 45,
+        "abstained": 65,
+        "attempted": 85,
+        "attempted_exact": 42,
+        "attempted_semantic": 45,
+        "unlocatable": 7,
+        "stages": {
+          "mergiraf": 85,
+          "abstain": 65
+        },
+        "gate_rejections": 0,
+        "spent_usd": 0.0,
+        "nominal_cost_usd": 0.0,
+        "nominal_cost_per_conflict_usd": 0.0
+      },
+      "llm_only": {
+        "n": 150,
+        "exact": 48,
+        "semantic": 54,
+        "ws": 52,
+        "abstained": 4,
+        "attempted": 146,
+        "attempted_exact": 48,
+        "attempted_semantic": 54,
+        "unlocatable": 0,
+        "stages": {
+          "llm": 145,
+          "abstain": 4,
+          "unknown": 1
+        },
+        "gate_rejections": 0,
+        "spent_usd": 0.0174422,
+        "nominal_cost_usd": 0.0264637,
+        "nominal_cost_per_conflict_usd": 0.00017642466666666667
+      },
+      "hybrid": {
+        "n": 150,
+        "exact": 54,
+        "semantic": 60,
+        "ws": 59,
+        "abstained": 12,
+        "attempted": 138,
+        "attempted_exact": 54,
+        "attempted_semantic": 60,
+        "unlocatable": 7,
+        "stages": {
+          "mergiraf": 83,
+          "llm": 47,
+          "llm_retry": 3,
+          "abstain": 10,
+          "unknown": 7
+        },
+        "gate_rejections": 19,
+        "spent_usd": 0.00439371,
+        "nominal_cost_usd": 0.01517979,
+        "nominal_cost_per_conflict_usd": 0.0001011986
+      }
+    },
+    "go": {
+      "git_default": {
+        "n": 116,
+        "exact": 0,
+        "semantic": 0,
+        "ws": 0,
+        "abstained": 116,
+        "attempted": 0,
+        "attempted_exact": 0,
+        "attempted_semantic": 0,
+        "unlocatable": 0,
+        "stages": {
+          "abstain": 116
+        },
+        "gate_rejections": 0,
+        "spent_usd": 0.0,
+        "nominal_cost_usd": 0.0,
+        "nominal_cost_per_conflict_usd": 0.0
+      },
+      "mergiraf_only": {
+        "n": 116,
+        "exact": 36,
+        "semantic": 37,
+        "ws": 43,
+        "abstained": 53,
+        "attempted": 63,
+        "attempted_exact": 36,
+        "attempted_semantic": 37,
+        "unlocatable": 7,
+        "stages": {
+          "mergiraf": 63,
+          "abstain": 53
+        },
+        "gate_rejections": 0,
+        "spent_usd": 0.0,
+        "nominal_cost_usd": 0.0,
+        "nominal_cost_per_conflict_usd": 0.0
+      },
+      "llm_only": {
+        "n": 116,
+        "exact": 45,
+        "semantic": 49,
+        "ws": 47,
+        "abstained": 3,
+        "attempted": 113,
+        "attempted_exact": 45,
+        "attempted_semantic": 49,
+        "unlocatable": 0,
+        "stages": {
+          "llm": 113,
+          "abstain": 3
+        },
+        "gate_rejections": 0,
+        "spent_usd": 0.0136947,
+        "nominal_cost_usd": 0.0204387,
+        "nominal_cost_per_conflict_usd": 0.0001761956896551724
+      },
+      "hybrid": {
+        "n": 116,
+        "exact": 48,
+        "semantic": 52,
+        "ws": 57,
+        "abstained": 6,
+        "attempted": 110,
+        "attempted_exact": 48,
+        "attempted_semantic": 52,
+        "unlocatable": 3,
+        "stages": {
+          "mergiraf": 61,
+          "llm": 42,
+          "unknown": 8,
+          "abstain": 5
+        },
+        "gate_rejections": 14,
+        "spent_usd": 0.00257523,
+        "nominal_cost_usd": 0.01075764,
+        "nominal_cost_per_conflict_usd": 9.273827586206897e-05
+      }
+    },
+    "rust": {
+      "git_default": {
+        "n": 264,
+        "exact": 0,
+        "semantic": 0,
+        "ws": 0,
+        "abstained": 264,
+        "attempted": 0,
+        "attempted_exact": 0,
+        "attempted_semantic": 0,
+        "unlocatable": 2,
+        "stages": {
+          "abstain": 264
+        },
+        "gate_rejections": 0,
+        "spent_usd": 0.0,
+        "nominal_cost_usd": 0.0,
+        "nominal_cost_per_conflict_usd": 0.0
+      },
+      "mergiraf_only": {
+        "n": 264,
+        "exact": 35,
+        "semantic": 38,
+        "ws": 38,
+        "abstained": 175,
+        "attempted": 89,
+        "attempted_exact": 35,
+        "attempted_semantic": 38,
+        "unlocatable": 23,
+        "stages": {
+          "mergiraf": 89,
+          "abstain": 175
+        },
+        "gate_rejections": 0,
+        "spent_usd": 0.0,
+        "nominal_cost_usd": 0.0,
+        "nominal_cost_per_conflict_usd": 0.0
+      },
+      "llm_only": {
+        "n": 264,
+        "exact": 106,
+        "semantic": 115,
+        "ws": 107,
+        "abstained": 11,
+        "attempted": 253,
+        "attempted_exact": 106,
+        "attempted_semantic": 115,
+        "unlocatable": 2,
+        "stages": {
+          "llm": 251,
+          "abstain": 11,
+          "unknown": 2
+        },
+        "gate_rejections": 0,
+        "spent_usd": 0.0468464,
+        "nominal_cost_usd": 0.0565682,
+        "nominal_cost_per_conflict_usd": 0.00021427348484848483
+      },
+      "hybrid": {
+        "n": 264,
+        "exact": 98,
+        "semantic": 108,
+        "ws": 102,
+        "abstained": 33,
+        "attempted": 231,
+        "attempted_exact": 98,
+        "attempted_semantic": 108,
+        "unlocatable": 15,
+        "stages": {
+          "unknown": 24,
+          "llm": 129,
+          "mergiraf": 85,
+          "abstain": 25,
+          "llm_retry": 1
+        },
+        "gate_rejections": 65,
+        "spent_usd": 0.01463616,
+        "nominal_cost_usd": 0.05195426,
+        "nominal_cost_per_conflict_usd": 0.0001967964393939394
+      }
+    }
+  },
+  "post_cutoff": {
+    "git_default": {
+      "n": 396,
+      "exact": 0,
+      "semantic": 0,
+      "ws": 0,
+      "abstained": 396,
+      "attempted": 0,
+      "attempted_exact": 0,
+      "attempted_semantic": 0,
+      "unlocatable": 1,
+      "stages": {
+        "abstain": 396
+      },
+      "gate_rejections": 0,
+      "spent_usd": 0.0,
+      "nominal_cost_usd": 0.0,
+      "nominal_cost_per_conflict_usd": 0.0
+    },
+    "mergiraf_only": {
+      "n": 396,
+      "exact": 77,
+      "semantic": 78,
+      "ws": 79,
+      "abstained": 254,
+      "attempted": 142,
+      "attempted_exact": 77,
+      "attempted_semantic": 78,
+      "unlocatable": 31,
+      "stages": {
+        "mergiraf": 142,
+        "abstain": 254
+      },
+      "gate_rejections": 0,
+      "spent_usd": 0.0,
+      "nominal_cost_usd": 0.0,
+      "nominal_cost_per_conflict_usd": 0.0
+    },
+    "llm_only": {
+      "n": 396,
+      "exact": 147,
+      "semantic": 158,
+      "ws": 148,
+      "abstained": 12,
+      "attempted": 384,
+      "attempted_exact": 147,
+      "attempted_semantic": 158,
+      "unlocatable": 4,
+      "stages": {
+        "llm": 385,
+        "abstain": 10,
+        "unknown": 1
+      },
+      "gate_rejections": 0,
+      "spent_usd": 0.06860430000000001,
+      "nominal_cost_usd": 0.0884398,
+      "nominal_cost_per_conflict_usd": 0.00022333282828282828
+    },
+    "hybrid": {
+      "n": 396,
+      "exact": 149,
+      "semantic": 159,
+      "ws": 154,
+      "abstained": 37,
+      "attempted": 359,
+      "attempted_exact": 149,
+      "attempted_semantic": 159,
+      "unlocatable": 17,
+      "stages": {
+        "mergiraf": 128,
+        "llm": 196,
+        "unknown": 30,
+        "llm_retry": 10,
+        "abstain": 32
+      },
+      "gate_rejections": 94,
+      "spent_usd": 0.02239806,
+      "nominal_cost_usd": 0.07785627,
+      "nominal_cost_per_conflict_usd": 0.00019660674242424244
+    }
+  },
+  "pre_cutoff": {
+    "git_default": {
+      "n": 735,
+      "exact": 0,
+      "semantic": 0,
+      "ws": 0,
+      "abstained": 735,
+      "attempted": 0,
+      "attempted_exact": 0,
+      "attempted_semantic": 0,
+      "unlocatable": 3,
+      "stages": {
+        "abstain": 735
+      },
+      "gate_rejections": 0,
+      "spent_usd": 0.0,
+      "nominal_cost_usd": 0.0,
+      "nominal_cost_per_conflict_usd": 0.0
+    },
+    "mergiraf_only": {
+      "n": 735,
+      "exact": 192,
+      "semantic": 211,
+      "ws": 212,
+      "abstained": 395,
+      "attempted": 340,
+      "attempted_exact": 192,
+      "attempted_semantic": 211,
+      "unlocatable": 43,
+      "stages": {
+        "mergiraf": 340,
+        "abstain": 395
+      },
+      "gate_rejections": 0,
+      "spent_usd": 0.0,
+      "nominal_cost_usd": 0.0,
+      "nominal_cost_per_conflict_usd": 0.0
+    },
+    "llm_only": {
+      "n": 735,
+      "exact": 312,
+      "semantic": 339,
+      "ws": 330,
+      "abstained": 39,
+      "attempted": 696,
+      "attempted_exact": 312,
+      "attempted_semantic": 339,
+      "unlocatable": 2,
+      "stages": {
+        "llm": 693,
+        "abstain": 39,
+        "unknown": 3
+      },
+      "gate_rejections": 0,
+      "spent_usd": 0.0834771,
+      "nominal_cost_usd": 0.1116336,
+      "nominal_cost_per_conflict_usd": 0.00015188244897959183
+    },
+    "hybrid": {
+      "n": 735,
+      "exact": 345,
+      "semantic": 376,
+      "ws": 372,
+      "abstained": 71,
+      "attempted": 664,
+      "attempted_exact": 345,
+      "attempted_semantic": 376,
+      "unlocatable": 29,
+      "stages": {
+        "mergiraf": 331,
+        "llm": 293,
+        "unknown": 46,
+        "abstain": 60,
+        "llm_retry": 5
+      },
+      "gate_rejections": 105,
+      "spent_usd": 0.02282309,
+      "nominal_cost_usd": 0.072267,
+      "nominal_cost_per_conflict_usd": 9.832244897959184e-05
+    }
+  },
+  "merge_bench_sized": {
+    "git_default": {
+      "n": 477,
+      "exact": 0,
+      "semantic": 0,
+      "ws": 0,
+      "abstained": 477,
+      "attempted": 0,
+      "attempted_exact": 0,
+      "attempted_semantic": 0,
+      "unlocatable": 1,
+      "stages": {
+        "abstain": 477
+      },
+      "gate_rejections": 0,
+      "spent_usd": 0.0,
+      "nominal_cost_usd": 0.0,
+      "nominal_cost_per_conflict_usd": 0.0
+    },
+    "mergiraf_only": {
+      "n": 477,
+      "exact": 118,
+      "semantic": 127,
+      "ws": 121,
+      "abstained": 266,
+      "attempted": 211,
+      "attempted_exact": 118,
+      "attempted_semantic": 127,
+      "unlocatable": 16,
+      "stages": {
+        "mergiraf": 211,
+        "abstain": 266
+      },
+      "gate_rejections": 0,
+      "spent_usd": 0.0,
+      "nominal_cost_usd": 0.0,
+      "nominal_cost_per_conflict_usd": 0.0
+    },
+    "llm_only": {
+      "n": 477,
+      "exact": 237,
+      "semantic": 248,
+      "ws": 240,
+      "abstained": 26,
+      "attempted": 451,
+      "attempted_exact": 237,
+      "attempted_semantic": 248,
+      "unlocatable": 1,
+      "stages": {
+        "llm": 450,
+        "abstain": 26,
+        "unknown": 1
+      },
+      "gate_rejections": 0,
+      "spent_usd": 0.0504053,
+      "nominal_cost_usd": 0.064128,
+      "nominal_cost_per_conflict_usd": 0.00013444025157232706
+    },
+    "hybrid": {
+      "n": 477,
+      "exact": 238,
+      "semantic": 251,
+      "ws": 243,
+      "abstained": 40,
+      "attempted": 437,
+      "attempted_exact": 238,
+      "attempted_semantic": 251,
+      "unlocatable": 9,
+      "stages": {
+        "mergiraf": 208,
+        "llm": 207,
+        "unknown": 16,
+        "abstain": 38,
+        "llm_retry": 8
+      },
+      "gate_rejections": 59,
+      "spent_usd": 0.01821366,
+      "nominal_cost_usd": 0.04911724,
+      "nominal_cost_per_conflict_usd": 0.00010297115303983229
+    }
+  }
+}

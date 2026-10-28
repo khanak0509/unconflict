@@ -1,0 +1,34 @@
+track B: 725 items, 1131 conflicts, systems=['git_default', 'mergiraf_only', 'llm_only', 'hybrid'], model=gpt-6-luna
+ledger so far: $0.6216; this run capped at +$0.60 (hard cap $1.2216)
+rough uncached cost estimate: $0.390 (first LLM call per conflict shared between LLM systems via cache)
+  git_default: done (5s, spent so far this run $0.0000)
+  mergiraf_only: done (65s, spent so far this run $0.0000)
+  llm_only: done (387s, spent so far this run $0.1521)
+  hybrid: done (567s, spent so far this run $0.1973)
+# Run full-B (track B)
+
+model `gpt-6-luna` (reasoning_effort=none), seed 0, 1131 conflicts from 725 items, 0 excluded. Spent this run: $0.1973.
+
+Cost columns are nominal (what each system's calls cost without the shared cache).
+
+**Overall**
+
+| system | n | exact | semantic | whitespace-norm | abstain | precision (exact) | precision (semantic) | gate rejections | cost | $/conflict |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| git_default | 1131 | 0.0% | 0.0% | 0.0% | 100.0% | – | – | 0 | $0.0000 | $0.000000 |
+| mergiraf_only | 1131 | 23.8% | 25.6% | 25.7% | 57.4% | 55.8% | 60.0% | 0 | $0.0000 | $0.000000 |
+| llm_only | 1131 | 40.6% | 43.9% | 42.3% | 4.5% | 42.5% | 46.0% | 0 | $0.2001 | $0.000177 |
+| hybrid | 1131 | 43.7% | 47.3% | 46.5% | 9.5% | 48.3% | 52.3% | 199 | $0.1501 | $0.000133 |
+
+Stage that handled each conflict:
+
+| system | mergiraf | llm | llm_retry | abstain | unknown |
+|---|---:|---:|---:|---:|---:|
+| git_default | 0.0% | 0.0% | 0.0% | 100.0% | 0.0% |
+| mergiraf_only | 42.6% | 0.0% | 0.0% | 57.4% | 0.0% |
+| llm_only | 0.0% | 95.3% | 0.0% | 4.3% | 0.4% |
+| hybrid | 40.6% | 43.2% | 1.3% | 8.1% | 6.7% |
+
+
+wrote /Users/khanak/Desktop/unconflict/results/full-B
+spend: this run $0.1973; ledger total $0.8189 of $2.50 cap

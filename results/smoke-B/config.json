@@ -1,0 +1,66 @@
+{
+  "run_id": "smoke-B",
+  "date": "2026-10-28T21:14:34",
+  "track": "B",
+  "systems": [
+    "git_default",
+    "mergiraf_only",
+    "llm_only",
+    "hybrid"
+  ],
+  "languages": [
+    "python",
+    "javascript",
+    "typescript",
+    "java",
+    "go"
+  ],
+  "per_language": 2,
+  "seed": 0,
+  "n_items": 9,
+  "n_conflicts": 14,
+  "excluded": 0,
+  "model": "gpt-6-luna",
+  "reasoning_effort": "none",
+  "prices_per_1M": {
+    "input": 0.1,
+    "cached_input": 0.01,
+    "output": 0.5
+  },
+  "context_lines": 60,
+  "max_hunk_lines": 300,
+  "retries": 1,
+  "mergiraf": "mergiraf 0.20.0",
+  "model_cutoff": "2026-05-18",
+  "spent_this_run_usd": 0.0023208,
+  "ledger_total_usd": 0.0029482,
+  "llm_calls_this_run": 17,
+  "cache": {
+    "hits": 3,
+    "misses": 17
+  },
+  "wall_seconds": 16.5,
+  "command": "eval/run.py --track B --per-language 2 --languages python javascript typescript java go --max-spend 0.05 --yes --run-id smoke-B",
+  "data_files": {
+    "data/mined/python.jsonl": {
+      "bytes": 13590268,
+      "sha256": "bebe7a64cd2276a72fbea9b839d9b6cf0b350156356d893da4717ce522440c96"
+    },
+    "data/mined/javascript.jsonl": {
+      "bytes": 25538530,
+      "sha256": "1e3a268a2e58e2c7ad090e8de4cfc0d56ddb8864f1bb31db6f3bddd8e720a2eb"
+    },
+    "data/mined/typescript.jsonl": {
+      "bytes": 15468329,
+      "sha256": "fb6d3339703627024d843a50c1a18e1d7c8407d245e5a8ac33b377ad208d9a95"
+    },
+    "data/mined/java.jsonl": {
+      "bytes": 14714103,
+      "sha256": "7f563932ef7d740edbfeceba618461ee0f45563f824d00a549b7890f2f8ccc84"
+    },
+    "data/mined/go.jsonl": {
+      "bytes": 6649339,
+      "sha256": "6f82b3ca7cd528e21e8f163d448254e19b69baa8049f8dd69313e93350dc8d98"
+    }
+  }
+}

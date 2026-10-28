@@ -1,0 +1,74 @@
+{
+  "run_id": "full-B",
+  "date": "2026-10-28T22:59:35",
+  "track": "B",
+  "systems": [
+    "git_default",
+    "mergiraf_only",
+    "llm_only",
+    "hybrid"
+  ],
+  "languages": [
+    "python",
+    "javascript",
+    "typescript",
+    "java",
+    "go",
+    "rust"
+  ],
+  "per_language": null,
+  "seed": 0,
+  "n_items": 725,
+  "n_conflicts": 1131,
+  "excluded": 0,
+  "max_file_hunks": 20,
+  "model": "gpt-6-luna",
+  "reasoning_effort": "none",
+  "prices_per_1M": {
+    "input": 0.1,
+    "cached_input": 0.01,
+    "output": 0.5
+  },
+  "context_lines": 60,
+  "context_chars_per_side": 4000,
+  "max_hunk_lines": 300,
+  "max_hunk_chars": 12000,
+  "retries": 1,
+  "mergiraf": "mergiraf 0.20.0",
+  "model_cutoff": "2026-05-18",
+  "spent_this_run_usd": 0.19730254999999897,
+  "ledger_total_usd": 0.8188552999999992,
+  "llm_calls_this_run": 1219,
+  "cache": {
+    "hits": 881,
+    "misses": 1220
+  },
+  "wall_seconds": 567.7,
+  "command": "eval/run.py --track B --max-spend 0.60 --yes --run-id full-B --workers 8",
+  "data_files": {
+    "data/mined/python.jsonl": {
+      "bytes": 13590268,
+      "sha256": "bebe7a64cd2276a72fbea9b839d9b6cf0b350156356d893da4717ce522440c96"
+    },
+    "data/mined/javascript.jsonl": {
+      "bytes": 25538530,
+      "sha256": "1e3a268a2e58e2c7ad090e8de4cfc0d56ddb8864f1bb31db6f3bddd8e720a2eb"
+    },
+    "data/mined/typescript.jsonl": {
+      "bytes": 15468329,
+      "sha256": "fb6d3339703627024d843a50c1a18e1d7c8407d245e5a8ac33b377ad208d9a95"
+    },
+    "data/mined/java.jsonl": {
+      "bytes": 14714103,
+      "sha256": "7f563932ef7d740edbfeceba618461ee0f45563f824d00a549b7890f2f8ccc84"
+    },
+    "data/mined/go.jsonl": {
+      "bytes": 6649339,
+      "sha256": "6f82b3ca7cd528e21e8f163d448254e19b69baa8049f8dd69313e93350dc8d98"
+    },
+    "data/mined/rust.jsonl": {
+      "bytes": 34301518,
+      "sha256": "5f36de7adcaac7bd8338a6d6c6ad24d45e33d1bfd97edf3cb8282c3184320f50"
+    }
+  }
+}

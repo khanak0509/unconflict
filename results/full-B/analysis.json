@@ -1,0 +1,130 @@
+{
+  "hybrid_vs_llm_only": {
+    "exact": {
+      "n": 1131,
+      "clusters": 725,
+      "diff_pts": 3.09,
+      "ci95_pts": [
+        0.18,
+        5.94
+      ],
+      "b_right_a_wrong": 128,
+      "a_right_b_wrong": 93
+    },
+    "semantic": {
+      "n": 1131,
+      "clusters": 725,
+      "diff_pts": 3.36,
+      "ci95_pts": [
+        0.37,
+        6.15
+      ],
+      "b_right_a_wrong": 129,
+      "a_right_b_wrong": 91
+    }
+  },
+  "hybrid_vs_llm_only_precision_note": "precision differences come with different abstain rates",
+  "hybrid_vs_mergiraf_only": {
+    "exact": {
+      "n": 1131,
+      "clusters": 725,
+      "diff_pts": 19.89,
+      "ci95_pts": [
+        17.12,
+        22.75
+      ],
+      "b_right_a_wrong": 231,
+      "a_right_b_wrong": 6
+    },
+    "semantic": {
+      "n": 1131,
+      "clusters": 725,
+      "diff_pts": 21.75,
+      "ci95_pts": [
+        18.9,
+        24.73
+      ],
+      "b_right_a_wrong": 251,
+      "a_right_b_wrong": 5
+    }
+  },
+  "hybrid_vs_llm_only_post_cutoff": {
+    "n": 396,
+    "clusters": 221,
+    "diff_pts": 0.51,
+    "ci95_pts": [
+      -4.17,
+      5.4
+    ],
+    "b_right_a_wrong": 34,
+    "a_right_b_wrong": 32
+  },
+  "hybrid_vs_llm_only_pre_cutoff": {
+    "n": 735,
+    "clusters": 504,
+    "diff_pts": 4.49,
+    "ci95_pts": [
+      0.81,
+      8.01
+    ],
+    "b_right_a_wrong": 94,
+    "a_right_b_wrong": 61
+  },
+  "hybrid_vs_llm_only_merge_bench_sized": {
+    "n": 477,
+    "clusters": 359,
+    "diff_pts": 0.21,
+    "ci95_pts": [
+      -4.1,
+      4.41
+    ],
+    "b_right_a_wrong": 41,
+    "a_right_b_wrong": 40
+  },
+  "hybrid_abstained": {
+    "n": 108,
+    "llm_only_was_exact": 23,
+    "llm_only_was_semantic": 24,
+    "llm_only_was_wrong": 49
+  },
+  "by_hybrid_stage": {
+    "mergiraf": {
+      "n": 459,
+      "hybrid_exact": 261,
+      "llm_only_exact": 191,
+      "mergiraf_only_exact": 262
+    },
+    "llm": {
+      "n": 489,
+      "hybrid_exact": 219,
+      "llm_only_exact": 223,
+      "mergiraf_only_exact": 6
+    },
+    "llm_retry": {
+      "n": 15,
+      "hybrid_exact": 5,
+      "llm_only_exact": 5,
+      "mergiraf_only_exact": 0
+    },
+    "abstain": {
+      "n": 92,
+      "hybrid_exact": 0,
+      "llm_only_exact": 17,
+      "mergiraf_only_exact": 1
+    },
+    "unknown": {
+      "n": 76,
+      "hybrid_exact": 9,
+      "llm_only_exact": 23,
+      "mergiraf_only_exact": 0
+    }
+  },
+  "gate_rejections_total": 199,
+  "files_with_gate_rejections": 41,
+  "unlocatable": {
+    "git_default": 4,
+    "mergiraf_only": 74,
+    "llm_only": 6,
+    "hybrid": 46
+  }
+}

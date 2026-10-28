@@ -1,0 +1,96 @@
+{
+  "run_id": "pilot-A2",
+  "date": "2026-10-28T21:59:06",
+  "track": "A",
+  "systems": [
+    "git_default",
+    "llm_only",
+    "llm_gate"
+  ],
+  "languages": [
+    "javascript",
+    "java",
+    "rust",
+    "c",
+    "cpp",
+    "csharp",
+    "php",
+    "python",
+    "ruby",
+    "go",
+    "typescript"
+  ],
+  "per_language": 25,
+  "seed": 0,
+  "n_items": 275,
+  "n_conflicts": 275,
+  "excluded": 0,
+  "max_file_hunks": null,
+  "model": "gpt-6-luna",
+  "reasoning_effort": "none",
+  "prices_per_1M": {
+    "input": 0.1,
+    "cached_input": 0.01,
+    "output": 0.5
+  },
+  "context_lines": 60,
+  "max_hunk_lines": 300,
+  "retries": 1,
+  "mergiraf": "mergiraf 0.20.0",
+  "model_cutoff": "2026-05-18",
+  "spent_this_run_usd": 0.0,
+  "ledger_total_usd": 0.14081053,
+  "llm_calls_this_run": 0,
+  "cache": {
+    "hits": 551,
+    "misses": 0
+  },
+  "wall_seconds": 0.7,
+  "command": "eval/run.py --track A --per-language 25 --max-spend 0.05 --yes --run-id pilot-A2",
+  "data_files": {
+    "data/merge_bench/merges/repos_github_javascript/dataset/test/data-00000-of-00001.arrow": {
+      "bytes": 2057720,
+      "sha256": "831c0195d9f66dea6a6e5769db0afcec2c7fde4d2896a703382344665713b66d"
+    },
+    "data/merge_bench/merges/repos_reaper_java/dataset/test/data-00000-of-00001.arrow": {
+      "bytes": 2530904,
+      "sha256": "48539b260d08974c75179c3829f9406d1632fe7797df136fecfff9dbcafd9557"
+    },
+    "data/merge_bench/merges/repos_github_rust/dataset/test/data-00000-of-00001.arrow": {
+      "bytes": 1877848,
+      "sha256": "62feef5dbe7a2b8e8847a28208e0fa87b22c86e2023ed006fd8e556741eeab04"
+    },
+    "data/merge_bench/merges/repos_reaper_c/dataset/test/data-00000-of-00001.arrow": {
+      "bytes": 1612072,
+      "sha256": "e0518fa597b7f3526d412bebd5ffdb435606056037d02464b438d12a2265bce0"
+    },
+    "data/merge_bench/merges/repos_reaper_cpp/dataset/test/data-00000-of-00001.arrow": {
+      "bytes": 2081944,
+      "sha256": "ab64d3de16ee8b6467b1badfe0803baaef8838cd50e15b45d06fb631216d0a6f"
+    },
+    "data/merge_bench/merges/repos_reaper_csharp/dataset/test/data-00000-of-00001.arrow": {
+      "bytes": 2565368,
+      "sha256": "4a86c0e16ab64e9bcb71af86ce74c4f78a5a85f369ec31d324be41a8f8d3881a"
+    },
+    "data/merge_bench/merges/repos_reaper_php/dataset/test/data-00000-of-00001.arrow": {
+      "bytes": 1503872,
+      "sha256": "9f890fd04f0250cd8a1285583a171108d234e84ee0b09d34254886ccfe7aba42"
+    },
+    "data/merge_bench/merges/repos_reaper_python/dataset/test/data-00000-of-00001.arrow": {
+      "bytes": 2061104,
+      "sha256": "d895fbc5671e9970d449907ccee4f0c696d2c14867a6fd28176dda685840e3c4"
+    },
+    "data/merge_bench/merges/repos_reaper_ruby/dataset/test/data-00000-of-00001.arrow": {
+      "bytes": 1736528,
+      "sha256": "b0d925fb62080c2b82de2375ffd1b137984b0a0aac5b9f2bcd1adf2242099864"
+    },
+    "data/merge_bench/merges/repos_github_go/dataset/test/data-00000-of-00001.arrow": {
+      "bytes": 1826408,
+      "sha256": "b861acd5c7428351f7d6e4b18c1434e12f6e933110247517e044c8dccff341d2"
+    },
+    "data/merge_bench/merges/repos_github_typescript/dataset/test/data-00000-of-00001.arrow": {
+      "bytes": 2080744,
+      "sha256": "c358b211029761906b385fc67f000cbb7eb81de2524d7501ee8504f83fd7968b"
+    }
+  }
+}

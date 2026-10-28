@@ -1,0 +1,43 @@
+{
+  "run_id": "smoke-A",
+  "date": "2026-10-28T20:49:07",
+  "track": "A",
+  "systems": [
+    "git_default",
+    "llm_only",
+    "llm_gate"
+  ],
+  "languages": [
+    "python",
+    "javascript",
+    "typescript",
+    "java",
+    "go"
+  ],
+  "per_language": 2,
+  "seed": 0,
+  "n_items": 10,
+  "n_conflicts": 10,
+  "excluded": 0,
+  "model": "gpt-6-luna",
+  "reasoning_effort": "none",
+  "prices_per_1M": {
+    "input": 0.1,
+    "cached_input": 0.01,
+    "output": 0.5
+  },
+  "context_lines": 60,
+  "max_hunk_lines": 300,
+  "retries": 1,
+  "mergiraf": "mergiraf 0.20.0",
+  "model_cutoff": "2026-05-18",
+  "spent_this_run_usd": 0.0006274000000000001,
+  "ledger_total_usd": 0.0006274000000000001,
+  "llm_calls_this_run": 10,
+  "cache": {
+    "hits": 10,
+    "misses": 10
+  },
+  "wall_seconds": 9.1,
+  "command": "eval/run.py --track A --per-language 2 --languages python javascript typescript java go --max-spend 0.05 --yes --run-id smoke-A"
+}
