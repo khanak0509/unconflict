@@ -1,0 +1,6 @@
+python: jakubroztocil/httpie mitsuhiko/flask kennethreitz/requests rg3/youtube-dl letsencrypt/lets-encrypt-preview
+java: nostra13/Android-Universal-Image-Loader ReactiveX/RxJava getlantern/lantern square/retrofit google/iosched
+javascript: axios/axios sveltejs/svelte typicode/json-server louislam/uptime-kuma hakimel/reveal.js
+typescript: vuejs/vue langgenius/dify excalidraw/excalidraw shadcn-ui/ui tailwindlabs/tailwindcss
+go: ollama/ollama fatedier/frp gin-gonic/gin gohugoio/hugo syncthing/syncthing
+rust: tauri-apps/tauri rustdesk/rustdesk FuelLabs/sway astral-sh/uv alacritty/alacritty
