@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="920" height="450" viewBox="0 0 920 450" role="img" aria-label="Terminal demo: git merge with unconflict as the merge driver. mergiraf resolves most of the file, the LLM resolves the last conflict, git stops for review, git diff shows the chosen line, and the merge is committed.">
+<style>
+  text { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 13px; white-space: pre; }
+  .fg { fill: #d4d4d4; } .dim { fill: #8b8b8b; } .cyan { fill: #4fc1d6; } .green { fill: #6cc96c; }
+  .red { fill: #f07178; } .yellow { fill: #e5c07b; } .prompt { fill: #6cc96c; font-weight: 700; }
+  .cmd { fill: #ffffff; } .b { font-weight: 700; } .title { fill: #9a9a9a; font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 12px; }
+</style>
+<rect width="920" height="450" rx="10" fill="#1e1e1e"/>
+<rect width="920" height="34" rx="10" fill="#2b2b2b"/>
+<rect y="24" width="920" height="10" fill="#2b2b2b"/>
+<circle cx="20" cy="17" r="6" fill="#ff5f57"/><circle cx="40" cy="17" r="6" fill="#febc2e"/><circle cx="60" cy="17" r="6" fill="#28c840"/>
+<text x="460" y="21" text-anchor="middle" class="title">git merge, with unconflict as the merge driver</text>
+<style>
+@keyframes s0 { 0%, 2.35% { opacity: 0 } 2.65%, 96% { opacity: 1 } 100% { opacity: 0 } } .s0 { animation: s0 17s linear infinite; }
+@keyframes c0 { 0%, 3.24% { transform: translateX(0) } 6.74%, 100% { transform: translateX(139.1px) } } .c0 { animation: c0 17s steps(17, end) infinite; }
+@keyframes s1 { 0%, 11.76% { opacity: 0 } 12.06%, 96% { opacity: 1 } 100% { opacity: 0 } } .s1 { animation: s1 17s linear infinite; }
+@keyframes s2 { 0%, 13.82% { opacity: 0 } 14.12%, 96% { opacity: 1 } 100% { opacity: 0 } } .s2 { animation: s2 17s linear infinite; }
+@keyframes s3 { 0%, 15.88% { opacity: 0 } 16.18%, 96% { opacity: 1 } 100% { opacity: 0 } } .s3 { animation: s3 17s linear infinite; }
+@keyframes s4 { 0%, 17.94% { opacity: 0 } 18.24%, 96% { opacity: 1 } 100% { opacity: 0 } } .s4 { animation: s4 17s linear infinite; }
+@keyframes s5 { 0%, 20.00% { opacity: 0 } 20.29%, 96% { opacity: 1 } 100% { opacity: 0 } } .s5 { animation: s5 17s linear infinite; }
+@keyframes s6 { 0%, 22.94% { opacity: 0 } 23.24%, 96% { opacity: 1 } 100% { opacity: 0 } } .s6 { animation: s6 17s linear infinite; }
+@keyframes s7 { 0%, 29.41% { opacity: 0 } 29.71%, 96% { opacity: 1 } 100% { opacity: 0 } } .s7 { animation: s7 17s linear infinite; }
+@keyframes c7 { 0%, 30.29% { transform: translateX(0) } 33.59%, 100% { transform: translateX(131.3px) } } .c7 { animation: c7 17s steps(16, end) infinite; }
+@keyframes s8 { 0%, 35.88% { opacity: 0 } 36.18%, 96% { opacity: 1 } 100% { opacity: 0 } } .s8 { animation: s8 17s linear infinite; }
+@keyframes s9 { 0%, 37.65% { opacity: 0 } 37.94%, 96% { opacity: 1 } 100% { opacity: 0 } } .s9 { animation: s9 17s linear infinite; }
+@keyframes s10 { 0%, 39.41% { opacity: 0 } 39.71%, 96% { opacity: 1 } 100% { opacity: 0 } } .s10 { animation: s10 17s linear infinite; }
+@keyframes s11 { 0%, 41.18% { opacity: 0 } 41.47%, 96% { opacity: 1 } 100% { opacity: 0 } } .s11 { animation: s11 17s linear infinite; }
+@keyframes s12 { 0%, 42.94% { opacity: 0 } 43.24%, 96% { opacity: 1 } 100% { opacity: 0 } } .s12 { animation: s12 17s linear infinite; }
+@keyframes s13 { 0%, 44.71% { opacity: 0 } 45.00%, 96% { opacity: 1 } 100% { opacity: 0 } } .s13 { animation: s13 17s linear infinite; }
+@keyframes s14 { 0%, 46.47% { opacity: 0 } 46.76%, 96% { opacity: 1 } 100% { opacity: 0 } } .s14 { animation: s14 17s linear infinite; }
+@keyframes s15 { 0%, 48.82% { opacity: 0 } 49.12%, 96% { opacity: 1 } 100% { opacity: 0 } } .s15 { animation: s15 17s linear infinite; }
+@keyframes s16 { 0%, 55.29% { opacity: 0 } 55.59%, 96% { opacity: 1 } 100% { opacity: 0 } } .s16 { animation: s16 17s linear infinite; }
+@keyframes c16 { 0%, 56.18% { transform: translateX(0) } 64.82%, 100% { transform: translateX(334.9px) } } .c16 { animation: c16 17s steps(42, end) infinite; }
+@keyframes s17 { 0%, 66.47% { opacity: 0 } 66.76%, 96% { opacity: 1 } 100% { opacity: 0 } } .s17 { animation: s17 17s linear infinite; }
+@keyframes c17 { 0%, 67.35% { transform: translateX(0) } 71.47%, 100% { transform: translateX(162.6px) } } .c17 { animation: c17 17s steps(20, end) infinite; }
+@keyframes s18 { 0%, 72.94% { opacity: 0 } 73.24%, 96% { opacity: 1 } 100% { opacity: 0 } } .s18 { animation: s18 17s linear infinite; }
+</style>
+<g class="s0"><text x="20" y="64"><tspan class="prompt">$ </tspan><tspan class="cmd">git merge feature</tspan></text><rect class="c0" x="35.7" y="50" width="139.1" height="20" fill="#1e1e1e"/></g>
+<text x="20" y="84" class="cyan b s1">unconflict: shop.py</text>
+<text x="20" y="104" class="fg s2">  stage 1 (structured): mergiraf; 1 conflict(s) left</text>
+<text x="20" y="124" class="fg s3">  stage 2/3 (LLM + gate): 1 resolved, 0 resolved after retry, 0 left for you; gate rejected 0 LLM output(s)</text>
+<text x="20" y="144" class="fg s4">    conflict #1: llm line 7</text>
+<text x="20" y="164" class="yellow s5">  review: LLM-resolved code is in shop.py, see `git diff shop.py`, then `git add shop.py` to accept</text>
+<text x="20" y="184" class="dim s6">CONFLICT (content): Merge conflict in shop.py</text>
+<g class="s7"><text x="20" y="204"><tspan class="prompt">$ </tspan><tspan class="cmd">git diff shop.py</tspan></text><rect class="c7" x="35.7" y="190" width="131.3" height="20" fill="#1e1e1e"/></g>
+<text x="20" y="224" class="cyan s8">@@@ -1,9 -1,9 +1,10 @@@</text>
+<text x="20" y="244" class="fg s9">  import json</text>
+<text x="20" y="264" class="green s10"> +import math</text>
+<text x="20" y="284" class="green s11">+ import logging</text>
+<text x="20" y="304" class="fg s12">  def price_with_tax(cents):</text>
+<text x="20" y="324" class="red s13">-     return math.ceil(cents * 1.10)</text>
+<text x="20" y="344" class="red s14"> -    return cents * 120 // 100</text>
+<text x="20" y="364" class="green b s15">++    return math.ceil(cents * 1.20)</text>
+<g class="s16"><text x="20" y="384"><tspan class="prompt">$ </tspan><tspan class="cmd">git add shop.py &amp;&amp; git commit -q --no-edit</tspan></text><rect class="c16" x="35.7" y="370" width="334.9" height="20" fill="#1e1e1e"/></g>
+<g class="s17"><text x="20" y="404"><tspan class="prompt">$ </tspan><tspan class="cmd">git log --oneline -1</tspan></text><rect class="c17" x="35.7" y="390" width="162.6" height="20" fill="#1e1e1e"/></g>
+<text x="20" y="424" class="fg s18">6fa1a77 Merge branch &#x27;feature&#x27;</text>
+</svg>

@@ -138,6 +138,17 @@ real `usage_metadata` (input, cached input, output including reasoning tokens) a
 `spend_log.jsonl`. Each eval run also takes `--max-spend`, a cap on new spend for that run. Cache:
 `~/.unconflict/cache/`, keyed by SHA-256 of (model, reasoning effort, max tokens, messages, schema).
 
+## Limitations and caveats
+
+- **One model, one sample per conflict.** I didn't test other models or repeated runs. Re-running reproduces my numbers exactly (the cache serves the stored answers), but a new uncached call can give a different answer.
+- **Exact match to what the developer committed is a strict, imperfect target.** Some developers made unrelated edits in the merge, kept conflict markers, or picked one side for reasons the code doesn't show. A different but correct merge counts as wrong. Nothing here builds the code or runs tests.
+- **The mined set is modest:** 28 repos (30 queried; 2 had no usable conflicts), at most 40 files each, repos under 150 MB. A few repos dominate some languages, e.g. dify in TypeScript and uv/sway/tauri in Rust.
+- **Some conflicts can't be fully scored.** When mergiraf reformats the lines around a conflict, scoring can't line up 0.7% of hunks in files it fully resolved, and these count as wrong. It also leaves 6.7% of the hybrid's hunks without a stage label. mergiraf's sub-expression merges sometimes leave a doubled space, which costs exact (not semantic) matches.
+- **The gate catches broken code, not wrong code.** A merge that parses but picks the wrong value passes. That's why the merge driver stops for review after LLM resolutions by default.
+- **Two design changes were made after the pilot.** The parse check now runs only when the inputs parse, and context is capped by characters. Both are documented in [METHODOLOGY.md](METHODOLOGY.md); the full runs include the pilot's conflicts.
+- **Your code is sent to OpenAI** for stage 2 (only the conflicting hunk and up to 60 lines around it). Use `--no-llm` or unset the key when that's not acceptable.
+- tree-sitter grammars are downloaded on first use (`unconflict warmup` prefetches them). Offline, the gate still checks markers but skips parsing.
+
 ## Reproduce
 
 ```bash

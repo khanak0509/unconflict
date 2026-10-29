@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="300" viewBox="0 0 920 300" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" role="img" aria-labelledby="t d">
+  <title id="t">Results on 1,131 real merge conflicts</title>
+  <desc id="d">Exact match: git 0%, mergiraf only 23.8%, LLM only 40.6%, hybrid 43.7%. Precision when it answers: mergiraf 55.8%, LLM only 42.5%, hybrid 48.3%. Cost per 1,000 conflicts: git and mergiraf $0, LLM only $0.18, hybrid $0.13.</desc>
+  <style>
+    .t1 { fill: #0b0b0b; } .t2 { fill: #52514e; } .t3 { fill: #6f6e69; }
+    .hi { fill: #2a78d6; } .lo { fill: #8a8880; } .axis { stroke: #d6d4cd; }
+    @media (prefers-color-scheme: dark) {
+      .t1 { fill: #f0efec; } .t2 { fill: #c3c2b7; } .t3 { fill: #9e9d95; }
+      .hi { fill: #3987e5; } .lo { fill: #6b6a64; } .axis { stroke: #3a3a37; }
+    }
+    .title { font-size: 17px; font-weight: 600; }
+    .head { font-size: 13px; font-weight: 600; }
+    .row { font-size: 14px; }
+    .rowhi { font-size: 14px; font-weight: 700; }
+    .val { font-size: 13px; font-variant-numeric: tabular-nums; }
+    .valhi { font-size: 13px; font-weight: 700; font-variant-numeric: tabular-nums; }
+    .cap { font-size: 12px; }
+  </style>
+
+  <text x="0" y="22" class="title t1">1,131 real merge conflicts · 28 open-source repos · 6 languages</text>
+
+  <text x="190" y="62" class="head t2">Exact match</text>
+  <text x="440" y="62" class="head t2">Precision (when it answers)</text>
+  <text x="690" y="62" class="head t2">Cost per 1,000 conflicts</text>
+
+  <line x1="190" y1="74" x2="190" y2="236" class="axis" stroke-width="1"/>
+  <line x1="440" y1="74" x2="440" y2="236" class="axis" stroke-width="1"/>
+  <line x1="690" y1="74" x2="690" y2="236" class="axis" stroke-width="1"/>
+
+  <text x="0" y="99" class="row t2">git (default)</text>
+  <text x="196" y="99" class="val t3">0%</text>
+  <text x="446" y="99" class="val t3">never answers</text>
+  <text x="696" y="99" class="val t3">$0</text>
+
+  <text x="0" y="139" class="row t2">mergiraf only</text>
+  <path class="lo" d="M190 126 h76.9 a4 4 0 0 1 4 4 v8 a4 4 0 0 1 -4 4 h-76.9 z"/>
+  <text x="278" y="139" class="val t2">23.8%</text>
+  <path class="lo" d="M440 126 h154.1 a4 4 0 0 1 4 4 v8 a4 4 0 0 1 -4 4 h-154.1 z"/>
+  <text x="606" y="139" class="val t2">55.8%</text>
+  <text x="696" y="139" class="val t3">$0</text>
+
+  <text x="0" y="179" class="row t2">LLM only</text>
+  <path class="lo" d="M190 166 h134 a4 4 0 0 1 4 4 v8 a4 4 0 0 1 -4 4 h-134 z"/>
+  <text x="336" y="179" class="val t2">40.6%</text>
+  <path class="lo" d="M440 166 h116.4 a4 4 0 0 1 4 4 v8 a4 4 0 0 1 -4 4 h-116.4 z"/>
+  <text x="568" y="179" class="val t2">42.5%</text>
+  <path class="lo" d="M690 166 h146.5 a4 4 0 0 1 4 4 v8 a4 4 0 0 1 -4 4 h-146.5 z"/>
+  <text x="848" y="179" class="val t2">$0.18</text>
+
+  <text x="0" y="219" class="rowhi t1">unconflict (hybrid)</text>
+  <path class="hi" d="M190 206 h144.6 a4 4 0 0 1 4 4 v8 a4 4 0 0 1 -4 4 h-144.6 z"/>
+  <text x="346" y="219" class="valhi t1">43.7%</text>
+  <path class="hi" d="M440 206 h132.9 a4 4 0 0 1 4 4 v8 a4 4 0 0 1 -4 4 h-132.9 z"/>
+  <text x="585" y="219" class="valhi t1">48.3%</text>
+  <path class="hi" d="M690 206 h109.1 a4 4 0 0 1 4 4 v8 a4 4 0 0 1 -4 4 h-109.1 z"/>
+  <text x="811" y="219" class="valhi t1">$0.13</text>
+
+  <text x="0" y="268" class="cap t3">Exact match: identical to the resolution the developer actually committed (Merge-Bench's scoring code).</text>
+  <text x="0" y="287" class="cap t3">Precision: exact matches among the conflicts a system resolved instead of leaving them for the human.</text>
+</svg>
