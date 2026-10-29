@@ -74,6 +74,10 @@ def cmd_driver(args) -> int:
         _err(f"unconflict: {args.path}\n" + "\n".join("  " + line for line in res.summary().splitlines()))
         if resolver is not None and res.llm_calls:
             _err("  " + budget.report())
+        if res.resolved and res.used_llm and not (args.auto or os.environ.get("UNCONFLICT_AUTO") == "1"):
+            _err(f"  review: LLM-resolved code is in {args.path}, see `git diff {args.path}`, "
+                 f"then `git add {args.path}` to accept")
+            return 1
         return 0 if res.resolved else 1
     except Exception as e:
         _err(f"unconflict: error: {e}; using git merge-file")
@@ -86,7 +90,7 @@ def cmd_install(args) -> int:
     scope = ["--global"] if args.global_ else []
     cmds = [
         ["git", "config", *scope, "merge.unconflict.name", "unconflict: mergiraf + LLM + gate"],
-        ["git", "config", *scope, "merge.unconflict.driver", DRIVER_CMD],
+        ["git", "config", *scope, "merge.unconflict.driver", DRIVER_CMD + (" --auto" if args.auto else "")],
     ]
     patterns = args.patterns or DEFAULT_PATTERNS
     if args.global_:
@@ -169,6 +173,7 @@ def main(argv: list[str] | None = None) -> int:
     d.add_argument("-s")
     d.add_argument("-x")
     d.add_argument("-y")
+    d.add_argument("--auto", action="store_true", help="accept LLM resolutions without stopping for review")
     common(d)
     d.set_defaults(func=cmd_driver)
 
@@ -176,6 +181,7 @@ def main(argv: list[str] | None = None) -> int:
     i.add_argument("--global", dest="global_", action="store_true", help="for all repos (~/.gitconfig)")
     i.add_argument("--patterns", nargs="*", help="file patterns (default: common source extensions)")
     i.add_argument("--dry-run", action="store_true")
+    i.add_argument("--auto", action="store_true", help="don't stop for review after LLM resolutions")
     i.set_defaults(func=cmd_install)
 
     s = sub.add_parser("spend", help="show total LLM spend")

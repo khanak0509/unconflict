@@ -91,3 +91,36 @@ def test_install_dry_run(tmp_path, capsys, monkeypatch):
     out = capsys.readouterr().out
     assert "merge.unconflict.driver" in out and "*.py merge=unconflict" in out
     assert not (tmp_path / ".gitattributes").exists()
+
+
+def _driver_with_fake_llm(tmp_path, monkeypatch, extra):
+    from conftest import FakeLLM
+    from unconflict.llm import LLMResolver
+
+    fake = FakeLLM('    return "hey " + name\n')
+    monkeypatch.setenv("OPENAI_API_KEY", "test")
+    monkeypatch.setattr(cli, "LLMResolver", lambda cfg, b, c: LLMResolver(cfg, b, c, chat_factory=fake.factory))
+    base, ours, theirs, _ = load_case("python", "llm_needed")
+    for n, c in (("O", base), ("A", ours), ("B", theirs)):
+        (tmp_path / n).write_text(c)
+    rc = cli.main(["driver", str(tmp_path / "O"), str(tmp_path / "A"), str(tmp_path / "B"), "g.py", *extra])
+    return rc, (tmp_path / "A").read_text()
+
+
+def test_driver_stops_for_review_after_llm(tmp_path, monkeypatch, capsys):
+    rc, text = _driver_with_fake_llm(tmp_path, monkeypatch, [])
+    assert rc == 1 and not conflict.has_conflicts(text) and '"hey "' in text
+    err = capsys.readouterr().err
+    assert "review:" in err and "line 2" in err
+
+
+def test_driver_auto_accepts_llm(tmp_path, monkeypatch):
+    rc, text = _driver_with_fake_llm(tmp_path, monkeypatch, ["--auto"])
+    assert rc == 0 and '"hey "' in text
+
+
+def test_install_auto_flag(tmp_path, capsys, monkeypatch):
+    subprocess.run(["git", "init", "-q", str(tmp_path)], check=True)
+    monkeypatch.chdir(tmp_path)
+    cli.main(["install", "--dry-run", "--auto", "--patterns", "*.py"])
+    assert "--auto'" in capsys.readouterr().out

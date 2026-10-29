@@ -15,6 +15,7 @@ class HunkLog:
     stage: str
     reason: str = ""
     cost_usd: float = 0.0
+    lines: tuple[int, int] | None = None
 
 
 @dataclass
@@ -46,11 +47,19 @@ class ResolveResult:
                 f"{n['abstain']} left for you; gate rejected {self.gate_rejections} LLM output(s)"
             )
             for h in self.hunks:
-                lines.append(f"  conflict #{h.index + 1}: {h.stage}" + (f" ({h.reason})" if h.reason else ""))
+                where = ""
+                if h.lines:
+                    a, b = h.lines
+                    where = f" lines {a}-{b}" if b > a else f" line {a}" if b == a else f" deleted at line {a}"
+                lines.append(f"  conflict #{h.index + 1}: {h.stage}{where}" + (f" ({h.reason})" if h.reason else ""))
         for s in self.gate_skipped:
             lines.append(f"note: gate check skipped: {s}")
         lines.append("result: fully resolved" if self.resolved else "result: conflicts remain (left for you)")
         return "\n".join(lines)
+
+    @property
+    def used_llm(self) -> bool:
+        return any(h.stage in ("llm", "llm_retry") for h in self.hunks)
 
 
 def _count(text: str) -> int:
@@ -226,12 +235,18 @@ def _stage23(
                 logs[i] = HunkLog(i, "abstain", "gate: combined resolutions failed checks", logs[i].cost_usd)
 
     out: list[str] = []
+    line = 0
     for i_seg, s in enumerate(segs):
         if isinstance(s, conflict.Hunk):
             i = idx.index(i_seg)
-            out.append("".join(resolved[i]) if i in resolved else "".join(s.render()))
+            chunk = resolved[i] if i in resolved else s.render()
+            if i in resolved:
+                logs[i].lines = (line + 1, line + len(chunk))
+            out.append("".join(chunk))
+            line += len(chunk)
         else:
             out.append(s)
+            line += len(s.splitlines())
     res.text = "".join(out)
     res.hunks = [logs[i] for i in sorted(logs)]
     res.resolved = len(resolved) == len(idx)
