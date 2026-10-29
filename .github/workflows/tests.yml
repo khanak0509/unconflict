@@ -1,0 +1,26 @@
+name: tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: Swatinem/rust-cache@v2
+        with:
+          cache-directories: ~/.cargo/bin
+
+      - name: Install mergiraf
+        run: command -v mergiraf || cargo install --locked mergiraf
+
+      - uses: astral-sh/setup-uv@v5
+
+      - name: Run tests
+        run: |
+          uv sync
+          uv run unconflict warmup python javascript typescript java
+          uv run pytest -q
