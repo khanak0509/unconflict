@@ -69,6 +69,12 @@ say "# now with unconflict as the merge driver"
 run "git config merge.unconflict.driver '$UNCONFLICT driver %O %A %B %P -s %S -x %X -y %Y $EXTRA'"
 run "echo '*.py merge=unconflict' > .gitattributes"
 run "git merge --no-edit feature || true"
+if git diff --name-only --diff-filter=U | grep -q shop.py && ! grep -q '<<<<<<<' shop.py; then
+  say "# git stopped so you can review what the LLM chose"
+  run "git diff shop.py"
+  run "git add shop.py && git commit -q --no-edit"
+  run "git log --oneline -1"
+fi
 run "cat shop.py"
 run "$UNCONFLICT spend | head -2"
 echo
